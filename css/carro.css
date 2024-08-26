@@ -1,0 +1,393 @@
+body {
+    background-image: url('../fondo.jpg');
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+	-webkit-user-select: none; /* Chrome, Safari, Opera */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Non-prefixed version, currently supported by Chrome, Edge, Opera, Safari, and Firefox */
+}
+/* Desactivar la selección de texto en los elementos arrastrables */
+.item, .cart_item {
+    -webkit-user-select: none; /* Chrome, Safari, Opera */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Non-prefixed version, currently supported by Chrome, Edge, Opera, Safari, and Firefox */
+}
+
+#item_container 
+{
+	width: 610px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.item 
+{
+	background: #fff;
+	float: left;
+	padding: 5px;
+	margin: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.5);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.5);
+	box-shadow: 0 1px 2px rgba(0,0,0,.5);
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	z-index: 5;
+	cursor:pointer;
+}
+
+input.cantidad {
+    background-color: #DDDDDD;
+    border: 0 none;
+    border-radius: 3px 3px 3px 3px;
+    float: right;
+	height: 20px;
+    line-height: 20px;
+    margin: 3px 5px 0 0;
+    text-align: center;
+    width: 30px;
+}
+
+.delete
+{
+	background:url(../img/delete.png);
+}
+
+.delete:hover 
+{
+	background-image:url(../img/delete-hover.png);
+}
+
+a.minus, a.add, a.delete {
+	display: block;
+    border: 0 none;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    float: right;
+    margin: 6px 2px 0 0;
+}
+
+a.minus, a.add {
+    float: left;
+}
+
+a.delete {
+    float: right;
+}
+
+.item img
+{
+	display:block;
+	clear:both;
+}
+
+.title, .price 
+{
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	letter-spacing: -1px;
+	font-weight: bold;
+	cursor:pointer;
+	
+}
+
+.title 
+{
+	color: #333;
+}
+
+.price 
+{
+	color: #0099cc;
+	margin-top: 5px;
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	
+}
+#price_min, #price_max {
+    width: 80px;  /* Cambia el ancho aquí */
+    box-sizing: content-box;  /* Asegura que el padding no afecta el width */
+    background-color: #fff;
+    color: #333;
+    max-width: none;  /* Evita que otro max-width interfiera */
+	margin: 1px;
+}
+
+
+
+.clear 
+{
+	clear: both;
+}
+
+#cart_container 
+{
+	margin: 0 auto;
+	width: 495px;
+}
+
+#cart_title span 
+{
+	border: 8px solid #666;
+	border-bottom-width: 0;
+	background: #333;
+	display: block;
+	float: left;
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 5px 10px;
+	-webkit-border-radius: .5em .5em 0 0;
+	-moz-border-radius: .5em .5em 0 0;
+	border-radius: .5em .5em 0 0;
+}
+
+#cart_toolbar 
+{
+	overflow: hidden;
+	border: 8px solid #666;
+	height: 190px;
+	z-index: -2;
+	width: 477px;
+	-webkit-border-radius: 0 .5em 0 0;
+	-moz-border-radius: 0 .5em 0 0;
+	border-radius: 0 .5em 0 0;
+	background: #ffffff;
+}
+
+#cart_items 
+{
+	height: 190px;
+	width: 483px;
+	position: relative;
+	padding: 0 0 0 2px;
+	z-index: 0;
+	border-width: 0 2px;
+	left: 0px;
+}
+
+.back 
+{
+	background: #e9e9e9;
+}
+/* Ajustes para el formulario */
+.navigate form {
+    display: block;
+    color: #ffffff; /* Cambia el color del texto a blanco para mejor visibilidad */
+}
+
+.navigate 
+{
+	width: 463px;
+	margin: 0 auto;
+	border: 8px solid #666;
+	border-top-width: 0;
+	-webkit-border-radius: 0 0 .5em .5em;
+	-moz-border-radius: 0 0 .5em .5em;
+	border-radius: 0 0 .5em .5em;
+	padding: 10px;
+	font-size: 14px;
+	background: #333;
+	font-weight: bold;
+}
+
+#nav_left 
+{
+	float: left;
+}
+
+#nav_right 
+{
+	float: right;
+}
+
+#nav_right input
+{
+    background-color: #DDDDDD;
+    border: 0 none;
+    border-radius: 3px 3px 3px 3px;
+	height: 20px;
+    line-height: 20px;
+    margin: 3px 5px 0 0;
+    text-align: center;
+    width: 50px;
+}
+
+.sptext 
+{
+	margin-left: 8px;            
+	color: #ffffff;
+}
+
+.stock
+{
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	letter-spacing: -1px;
+	font-weight: bold;
+	cursor:pointer;
+}
+
+.agotado {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+#form_enviar  input
+{
+	width:270px; text-align:left; 
+	padding: 9px; font-weight:bold;
+	border: solid 1px  #A4D1FF;
+	font: normal 0.9em Verdana, Tahoma, sans-serif;
+	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-border-radius: 5px 5px 5px 5px;-moz-border-radius: 5px 5px 5px 5px;border-radius: 5px 5px 5px 5px;
+	margin-bottom: 20px;
+	float:left;
+}
+
+#form_enviar  input:focus 
+{
+	outline: 0;
+	box-shadow: 0 0 10px #9F9FFF;
+	-moz-box-shadow: 0 0 10px #9F9FFF;
+	-webkit-box-shadow: 0 0 10px #9F9FFF;
+}
+
+#form_enviar  label
+{
+	float:left; 
+	width:100px; 
+	padding-top:10px;
+}
+
+.drop-active 
+{
+	background: #ffff99;
+}
+.drop-hover 
+{
+	background: #ffff66;
+}
+
+#contenedorError
+{
+	font-size: .7em;
+	display:none;
+}
+
+.iconoError
+{
+	float: left; 
+	margin-right: .3em;
+}
+#cart_toolbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #f5f5f5;
+	border: 1px solid #ddd;
+	padding: 10px;
+  }
+  
+  #cart_items {
+    height: 190px;
+    width: 483px;
+    position: relative;
+    padding: 0 0 0 2px;
+    z-index: 0;
+    border-width: 0 2px;
+    left: 0px;
+    display: flex;
+    flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
+    overflow-x: auto;  /* Permite el desplazamiento horizontal */
+}
+
+  
+  .cart_item {
+	width: 120px;
+	height: 150px;
+	margin-right: 10px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+  }
+  
+  .cart_item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+  
+  #btn_left,
+  #btn_right {
+	width: 40px;
+	height: 40px;
+	background-color: #ddd;
+	border: none;
+	outline: none;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	margin: 0 10px;
+  }
+#search_title{
+	width: 10em;
+}
+input[type="submit"] {
+    background-color: #4CAF50; /* Fondo del botón */
+    color: white; /* Color del texto */
+    padding: 5px 100px; /* Espaciado interno */
+    border: none; /* Eliminar bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero al pasar el ratón */
+    font-size: 16px; /* Tamaño del texto */
+	margin: 4px;
+	margin-left: 8px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Color de fondo al pasar el ratón por encima */
+}
+/*boton borrado*/
+.remove-button {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+.remove-button:hover {
+    background-color: darkred;
+}
+
+.cart_item {
+    position: relative;
+    margin: 10px;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: .5em;
+}
