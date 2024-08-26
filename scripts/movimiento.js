@@ -1,5 +1,5 @@
 const itemWidth = 120; // Ancho de cada elemento
-const cartItemsWrapper = document.getElementById('cart_items'); // Asegúrate de que es el contenedor correcto
+const cartItemsWrapper = document.getElementById('cart_items'); 
 const btnPrev = document.getElementById('btn_prev');
 const btnNext = document.getElementById('btn_next');
 
